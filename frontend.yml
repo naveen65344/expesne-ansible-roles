@@ -1,6 +1,6 @@
 - name: configuring mysql server
-  hosts: backend
+  hosts: mysql
   become: yes
   tasks:
   roles:
-  - backend
+  - frontend
