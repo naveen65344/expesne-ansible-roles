@@ -58,8 +58,8 @@
       state: import
     
       login_user: root
-      login_password: ExpenseApp@1
-      login_host: mysql.daws83s.shop
+      login_password: "{{password}}"
+      login_host: "{{login_host}}"
       target: /app/schema/backend.sql
 
 

@@ -1,2 +1,5 @@
 component: backend
 app_location: /app
+
+password: ExpenseApp@1
+login_host: mysql.daws83s.shop
