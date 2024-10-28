@@ -11,7 +11,7 @@
       state: started 
       enabled: yes  
 
-  - name: import data
+  - name: importing task from another role
     ansible.builtin.import_role:
         name: common
 
