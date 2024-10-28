@@ -11,31 +11,20 @@
       state: started 
       enabled: yes  
 
+  - ansible.builtin.import_role:
+        name: common
 
-  - name: Delete content & directory
-    ansible.builtin.file:
-     state: absent
-     path:    /usr/share/nginx/html
+        tasks_from: main.yml
 
 
     
-  - name: creating the directory
-    ansible.builtin.file:
-     state: directory
-     path:    /usr/share/nginx/html 
+ 
 
 
-  - name: Download the code
-    ansible.builtin.get_url:
-      url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-      dest: /tmp/frontend.zip
+  
 
 
-  - name: Unarchive a file that is already on the remote machine
-    ansible.builtin.unarchive:
-      src: /tmp/frontend.zip
-      dest: /usr/share/nginx/html
-      remote_src: yes       
+    
 
 
   - name: Copy file 
